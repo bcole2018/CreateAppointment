@@ -1,0 +1,46 @@
+<apex:page standardController="Lead">
+
+
+    <apex:pageBlock title="Customer Information">
+
+        <apex:pageBlockSection >
+
+            <apex:outputField value="{!   Lead.FirstName }" />
+            <apex:outputField value="{!Lead.LastName }" />
+
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="1">
+            <apex:outputField value="{!Lead.Street }" label="Street Address" />
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection columns="3">
+            <apex:outputField value="{!Lead.City }" />
+            <apex:outputField value="{!Lead.State }" label="State" />
+            <apex:outputField value="{!Lead.PostalCode }" label="Zipcode" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Customer Information">
+        <apex:pageBlockSection >
+            <apex:outputField value="{!Lead.FirstName }" />
+            <apex:outputField value="{!Lead.LastName }" />
+            <apex:outputField value="{!Lead.Street }" label="Street Address" />
+            <apex:outputField value="{!Lead.City }" />
+            <apex:outputField value="{!Lead.State }" label="State" />
+            <apex:outputField value="{!Lead.PostalCode }" label="Zipcode" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Lead Owner">
+        <apex:pageBlockSection >
+            <apex:outputField value="{!Lead.owner.Firstname}" />
+            <apex:outputField value="{!Lead.owner.Lastname}" />
+            <apex:outputField value="{!Lead.owner.Phone}" label="Phone Number" />
+            <apex:outputField value="{!Lead.owner.Email}" label="Email Address" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+
+
+
+</apex:page>
